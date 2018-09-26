@@ -507,7 +507,7 @@ void SettingState::Update(float dt) {
 	/*}else if (InputManager::KeyPress(SDLK_KP_ENTER) || InputManager::KeyPress(CONFIRM)) {
 		//Page
 		go = new GameObject();
-		page = new Sprite(*go, "assets/img/Title/passando.png", 6, 0.4, false, 0.0);
+		page = new Sprite(*go, ASSETS_PATH("/img/Title/passando.png"), 6, 0.4, false, 0.0);
 		page->SetScale(Vec2(4, 4));
 		go->AddComponent(page);
 		AddObject(go, "POS");

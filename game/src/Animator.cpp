@@ -83,7 +83,7 @@ void Animator::BuildSprites() {
 			sprites.emplace("panicSE", (Sprite*)associated.AddComponent(new Sprite(associated, path+"/panicSE.png", panicFrames, 0.2)));
 		}
 		if(associated.GetComponent("Monster") || associated.GetComponent("MonsterTutorial")) {
-			std::string monsterPath = "assets/img/characters/monster";
+			std::string monsterPath = ASSETS_PATH("/img/characters/monster");
 
 			sprites.emplace("mTransformSE", (Sprite*)associated.AddComponent(new Sprite(associated, monsterPath+"/transform.png", 7, 0.12)));
 
@@ -123,7 +123,7 @@ void Animator::BuildSprites() {
 			sprites.emplace("hurt/mAttackSE", (Sprite*)associated.AddComponent(new Sprite(associated, monsterPath+"/hurt/attackSE.png", 7, 0.14)));
 		}
 		else if(associated.GetComponent("Boss")) {
-			std::string bossPath = "assets/img/characters/boss";
+			std::string bossPath = ASSETS_PATH("/img/characters/boss");
 
 			sprites.emplace("bTransformSE", (Sprite*)associated.AddComponent(new Sprite(associated, bossPath+"/transform.png", 6, 0.12)));
 

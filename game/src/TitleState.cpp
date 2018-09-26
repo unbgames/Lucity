@@ -14,6 +14,7 @@
 #include "CameraFollower.h"
 
 #include <algorithm>
+#include "config.h"
 
 TitleState::TitleState() : State() {
 	int mw = 1024;
@@ -37,7 +38,7 @@ TitleState::TitleState() : State() {
 	if(true) {
 		//Opening Book
 		go = new GameObject();
-		sp = new Sprite(*go, "assets/img/title/opening.png", 5, 0.1, false);
+		sp = new Sprite(*go, ASSETS_PATH("/img/title/opening.png"), 5, 0.1, false);
 		sp->SetScale(Vec2(4, 4));
 		go->AddComponent(sp);
 		go->AddComponent(new CameraFollower(*go, Vec2(0, 0)));
@@ -46,7 +47,7 @@ TitleState::TitleState() : State() {
 
 		//Pass Page Book
 		go = new GameObject();
-		sp = new Sprite(*go, "assets/img/title/passing.png", 6, 0.1, false);
+		sp = new Sprite(*go, ASSETS_PATH("/img/title/passing.png"), 6, 0.1, false);
 		sp->SetScale(Vec2(4, 4));
 		go->AddComponent(sp);
 		go->AddComponent(new CameraFollower(*go, Vec2(0, 0)));
@@ -56,7 +57,7 @@ TitleState::TitleState() : State() {
 
 		//Page Left
 		go = new GameObject();
-		sp = new Sprite(*go, "assets/img/title/effect_left.png", 5, 0.15, false);
+		sp = new Sprite(*go, ASSETS_PATH("/img/title/effect_left.png"), 5, 0.15, false);
 		sp->SetScale(Vec2(4, 4));
 		go->AddComponent(sp);
 		go->AddComponent(new CameraFollower(*go, Vec2(275, 300) - (go->box.GetSize() / 2)));
@@ -66,7 +67,7 @@ TitleState::TitleState() : State() {
 
 		//Page Right
 		go = new GameObject();
-		sp = new Sprite(*go, "assets/img/title/effect_right.png", 5, 0.15, false);
+		sp = new Sprite(*go, ASSETS_PATH("/img/title/effect_right.png"), 5, 0.15, false);
 		sp->SetScale(Vec2(4, 4));
 		go->AddComponent(sp);
 		go->AddComponent(new CameraFollower(*go, Vec2(750, 300) - (go->box.GetSize() / 2)));
@@ -76,7 +77,7 @@ TitleState::TitleState() : State() {
 
 		//MyName
 		go = new GameObject();
-		sp = new Sprite(*go, "assets/img/title/myname.png", 15, 0.05, false);
+		sp = new Sprite(*go, ASSETS_PATH("/img/title/myname.png"), 15, 0.05, false);
 		sp->SetScale(Vec2(4, 4));
 		go->AddComponent(sp);
 		go->AddComponent(new CameraFollower(*go, Vec2(275, 275) - (go->box.GetSize() / 2)));
@@ -86,7 +87,7 @@ TitleState::TitleState() : State() {
 
 		//Title
 		go = new GameObject();
-		sp = new Sprite(*go, "assets/img/title/lucity.png", 7, 0.05, false);
+		sp = new Sprite(*go, ASSETS_PATH("/img/title/lucity.png"), 7, 0.05, false);
 		sp->SetScale(Vec2(4, 4));
 		go->AddComponent(sp);
 		go->AddComponent(new CameraFollower(*go, Vec2(750, 275) - (go->box.GetSize() / 2)));
@@ -96,7 +97,7 @@ TitleState::TitleState() : State() {
 
 		//Press Flag
 		go = new GameObject();
-		sp = new Sprite(*go, "assets/img/title/press.png", 2, 0.4, true);
+		sp = new Sprite(*go, ASSETS_PATH("/img/title/press.png"), 2, 0.4, true);
 		sp->SetScale(Vec2(4, 4));
 		go->AddComponent(sp);
 		go->AddComponent(new CameraFollower(*go, Vec2(750, 475) - (go->box.GetSize() / 2)));
@@ -106,7 +107,7 @@ TitleState::TitleState() : State() {
 	}
 
 	go = new GameObject();
-	sp = new Sprite(*go, "assets/img/title/selector_left.png");
+	sp = new Sprite(*go, ASSETS_PATH("/img/title/selector_left.png") );
 	sp->SetScale(Vec2(3, 3));
 	go->AddComponent(sp);
 	buttons["selected"].emplace_back(AddObject(go, "HUD"));
@@ -114,7 +115,7 @@ TitleState::TitleState() : State() {
 	go->Deactivate();
 
 	go = new GameObject();
-	sp = new Sprite(*go, "assets/img/title/selector_right.png");
+	sp = new Sprite(*go, ASSETS_PATH("/img/title/selector_right.png") );
 	sp->SetScale(Vec2(3, 3));
 	go->AddComponent(sp);
 	buttons["selected"].emplace_back(AddObject(go, "HUD"));
@@ -123,7 +124,7 @@ TitleState::TitleState() : State() {
 
 	//Main Menu: Stage Select
 	go = new GameObject();
-	go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Stage Select", Vec2(275, 180)));
+	go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Stage Select", Vec2(275, 180)));
 	buttons["main"].emplace_back(AddObject(go, "MAIN"));
 	go->box.SetPos(Vec2(-2000, -2000));
 	go->Deactivate();
@@ -132,21 +133,21 @@ TitleState::TitleState() : State() {
 	if(true) {
 		//Stage Menu: Tutorial
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Tutorial", Vec2(749, 180)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Tutorial", Vec2(749, 180)));
 		buttons["stage"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 		
 		//Stage Menu: City
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "City", Vec2(749, 220)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "City", Vec2(749, 220)));
 		buttons["stage"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 		
 		//Stage Menu: Boss
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Boss", Vec2(749, 260)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Boss", Vec2(749, 260)));
 		buttons["stage"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
@@ -154,21 +155,21 @@ TitleState::TitleState() : State() {
 	
 	//Main Menu: Settings
 	go = new GameObject();
-	go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Settings", Vec2(275, 220)));
+	go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Settings", Vec2(275, 220)));
 	buttons["main"].emplace_back(AddObject(go, "MAIN"));
 	go->box.SetPos(Vec2(-2000, -2000));
 	go->Deactivate();
 	
 	//Main Menu: Quit
 	go = new GameObject();
-	go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Quit", Vec2(275, 380)));
+	go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Quit", Vec2(275, 380)));
 	buttons["main"].emplace_back(AddObject(go, "MAIN"));
 	go->box.SetPos(Vec2(-2000, -2000));
 	go->Deactivate();
 	
 	//Settings Menu: Controls
 	go = new GameObject();
-	go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Controls", Vec2(275, 180)));
+	go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Controls", Vec2(275, 180)));
 	buttons["settings"].emplace_back(AddObject(go, "MAIN"));
 	go->box.SetPos(Vec2(-2000, -2000));
 	go->Deactivate();
@@ -177,112 +178,112 @@ TitleState::TitleState() : State() {
 	if(true) {
 		//Controls Menu: UP
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Up Movement Key", Vec2(695, 150)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Up Movement Key", Vec2(695, 150)));
 		buttons["controls"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 
 		//Controls Menu: UP Key
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/keybind_button.png", "assets/font/VT323.ttf", "Up", Vec2(870, 150)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/keybind_button.png"), ASSETS_PATH("/font/VT323.ttf"), "Up", Vec2(870, 150)));
 		buttons["keys"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 		
 		//Controls Menu: DOWN
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Down Movement Key", Vec2(695, 190)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Down Movement Key", Vec2(695, 190)));
 		buttons["controls"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 
 		//Controls Menu: DOWN Key
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/keybind_button.png", "assets/font/VT323.ttf", "Down", Vec2(870, 190)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/keybind_button.png"), ASSETS_PATH("/font/VT323.ttf"), "Down", Vec2(870, 190)));
 		buttons["keys"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 		
 		//Controls Menu: LEFT
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Left Movement Key", Vec2(695, 230)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Left Movement Key", Vec2(695, 230)));
 		buttons["controls"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 
 		//Controls Menu: LEFT Key
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/keybind_button.png", "assets/font/VT323.ttf", "Left", Vec2(870, 230)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/keybind_button.png"), ASSETS_PATH("/font/VT323.ttf"), "Left", Vec2(870, 230)));
 		buttons["keys"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 
 		//Controls Menu: RIGHT
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Right Movement Key", Vec2(695, 270)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Right Movement Key", Vec2(695, 270)));
 		buttons["controls"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 
 		//Controls Menu: RIGHT Key
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/keybind_button.png", "assets/font/VT323.ttf", "Right", Vec2(870, 270)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/keybind_button.png"), ASSETS_PATH("/font/VT323.ttf"), "Right", Vec2(870, 270)));
 		buttons["keys"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 
 		//Controls Menu: ACTION 1
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Attack 1 Key", Vec2(695, 310)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Attack 1 Key", Vec2(695, 310)));
 		buttons["controls"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 
 		//Controls Menu: ACTION 1 Key
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/keybind_button.png", "assets/font/VT323.ttf", "1", Vec2(870, 310)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/keybind_button.png"), ASSETS_PATH("/font/VT323.ttf"), "1", Vec2(870, 310)));
 		buttons["keys"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 
 		//Controls Menu: ACTION 2
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Attack 2 Key", Vec2(695, 350)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Attack 2 Key", Vec2(695, 350)));
 		buttons["controls"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 
 		//Controls Menu: ACTION 2 Key
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/keybind_button.png", "assets/font/VT323.ttf", "2", Vec2(870, 350)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/keybind_button.png"), ASSETS_PATH("/font/VT323.ttf"), "2", Vec2(870, 350)));
 		buttons["keys"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 
 		//Controls Menu: ACTION 3
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Attack 3 Key", Vec2(695, 390)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Attack 3 Key", Vec2(695, 390)));
 		buttons["controls"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 
 		//Controls Menu: ACTION 3 Key
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/keybind_button.png", "assets/font/VT323.ttf", "3", Vec2(870, 390)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/keybind_button.png"), ASSETS_PATH("/font/VT323.ttf"), "3", Vec2(870, 390)));
 		buttons["keys"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 
 		//Controls Menu: PAUSE
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Pause Menu Key", Vec2(695, 430)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Pause Menu Key", Vec2(695, 430)));
 		buttons["controls"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
 
 		//Controls Menu: ACTION 4 Key
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/keybind_button.png", "assets/font/VT323.ttf", "Escape", Vec2(870, 430)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/keybind_button.png"), ASSETS_PATH("/font/VT323.ttf"), "Escape", Vec2(870, 430)));
 		buttons["keys"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
@@ -290,7 +291,7 @@ TitleState::TitleState() : State() {
 
 	//Settings Menu: Screen
 	go = new GameObject();
-	go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Screen", Vec2(275, 220)));
+	go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Screen", Vec2(275, 220)));
 	buttons["settings"].emplace_back(AddObject(go, "MAIN"));
 	go->box.SetPos(Vec2(-2000, -2000));
 	go->Deactivate();
@@ -299,7 +300,7 @@ TitleState::TitleState() : State() {
 	if(true) {
 		//Screen Menu: fullscreen
 		go = new GameObject();
-		go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Fullsceen", Vec2(749, 180)));
+		go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Fullsceen", Vec2(749, 180)));
 		buttons["screen"].emplace_back(AddObject(go, "MAIN"));
 		go->box.SetPos(Vec2(-2000, -2000));
 		go->Deactivate();
@@ -307,7 +308,7 @@ TitleState::TitleState() : State() {
 	
 	//Settings Menu: Back
 	go = new GameObject();
-	go->AddComponentAsFirst(new Button(*go, "assets/img/title/button.png", "assets/font/VT323.ttf", "Back", Vec2(275, 380)));
+	go->AddComponentAsFirst(new Button(*go, ASSETS_PATH("/img/title/button.png"), ASSETS_PATH("/font/VT323.ttf"), "Back", Vec2(275, 380)));
 	buttons["settings"].emplace_back(AddObject(go, "MAIN"));
 	go->box.SetPos(Vec2(-2000, -2000));
 	go->Deactivate();
