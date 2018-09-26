@@ -340,7 +340,7 @@ void TutorialStageState::Update(float dt) {
 void TutorialStageState::LibrarianTutorialUpdate(float dt) {
 	if(!startDialog){
 		goDialog = new GameObject();
-		goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Ent�o � isso, voc� encontra um livro falante bonito e simp�tico como eu e simplesmente   decide deix�-lo na biblioteca mais pr�xima.", Vec2(512, 500)));
+		goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Entao e isso, voce encontra um livro falante bonito e simpatico como eu e simplesmente   decide deixa-lo na biblioteca mais proxima.", Vec2(512, 500)));
 		AddObject(goDialog, "DIALOG");
 		startDialog = true;
 	}
@@ -354,49 +354,49 @@ void TutorialStageState::LibrarianTutorialUpdate(float dt) {
 		case 1:
 			goDialog->Deactivate();
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Pera a�! Tem algo errado nessa biblioteca, eu sinto mais um dos meus por aqui. Assim como eu me passo por um livro tem outros que se passam como um de voc�s.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Pera ai! Tem algo errado nessa biblioteca, eu sinto mais um dos meus por aqui. Assim como eu me passo por um livro tem outros que se passam como um de voces.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			break;
 		case 2:
 			goDialog->Deactivate();
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Ent�o ... agora que eu te disse isso eu acho  que eles n�o v�o deixar isso passar barato,  acho melhor voc� tomar a iniciativa antes que eles percebam que voc� sabe o segredo deles hehehehehe", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Entao ... agora que eu te disse isso eu acho  que eles nao vao deixar isso passar barato,  acho melhor voce tomar a iniciativa antes que eles percebam que voce sabe o segredo deles hehehehehe", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			break;
 		case 3:
 			goDialog->Deactivate();
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Acho melhor eu te explicar como funcionam as coisas ent�o, vamos l�, eu vou ajudar voc� a combater esses monstros com a minha m�gica.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Acho melhor eu te explicar como funcionam as coisas entao, vamos la, eu vou ajudar voce a combater esses monstros com a minha magica.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			break;
 		case 4:
 			goDialog->Deactivate();
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"),"A tecla: "+ key1 + " -> Atira uma chuva de bolhas m�gicas para enfraquecer os monstros!" , Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"),"A tecla: "+ key1 + " -> Atira uma chuva de bolhas magicas para enfraquecer os monstros!" , Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			break;
 		case 5:
 			goDialog->Deactivate();
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "A tecla: " + key2 + " -> Atira uma poderosa magia que alcan�a uma dist�ncia maior e explode no final, sendo capaz de acertar v�rios dos monstros.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "A tecla: " + key2 + " -> Atira uma poderosa magia que alcanca uma distancia maior e explode no final, sendo capaz de acertar varios dos monstros.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			break;
 		case 6:
 			goDialog->Deactivate();
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "A tecla: " + key3 + " -> Atira uma fita m�gica capaz de prender os monstros quando eles estiverem atordoados, captur�-los � a �nica maneira que alguem como voc� vai conseguir venc�-los.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "A tecla: " + key3 + " -> Atira uma fita magica capaz de prender os monstros quando eles estiverem atordoados, captura-los e a unica maneira que alguem como voce vai conseguir vence-los.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			break;
 		case 7:
 			goDialog->Deactivate();
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Com esse arsenal de habilidades dignas do mais dign�ssimo livro m�gico eu tenho certeza que   at� voc� deve conseguer se livrar desses monstros.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Com esse arsenal de habilidades dignas do mais dignissimo livro magico eu tenho certeza que   ate voce deve conseguer se livrar desses monstros.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			break;
 		case 8:
 			goDialog->Deactivate();
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Eu vou te ajudar um pouco mais dessa vez, vou tentar revelar um dos monstros que est�o por aqui, ele deve ficar atordoado com isso, aproveite a oportunidade para captur�-lo com a minha magia.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Eu vou te ajudar um pouco mais dessa vez, vou tentar revelar um dos monstros que estao por aqui, ele deve ficar atordoado com isso, aproveite a oportunidade para captura-lo com a minha magia.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			break;
 		case 9:
@@ -411,7 +411,7 @@ void TutorialStageState::LibrarianTutorialUpdate(float dt) {
 		if (goBlib->IsDead()) {
 			dialogScene = 0;
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Viu s�, com a minha grande ajuda � bem f�cil. Mas n�o acaba por aqui, como eu disse antes  eles v�o tentar se disfar�ar ao m�ximo para n�o serem percebidos e cabe a voc� descobrir esses disfarces.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Viu so, com a minha grande ajuda e bem facil. Mas nao acaba por aqui, como eu disse antes  eles vao tentar se disfarcar ao maximo para nao serem percebidos e cabe a voce descobrir esses disfarces.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			dialogScene++;
 			tutorialScene++;
@@ -437,21 +437,21 @@ void TutorialStageState::SecondMonsterTutorialUpdate(float dt) {
 		case 1:
 			goDialog->Deactivate();
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Como descobrir o disfarce se s�o exatamente iguais a n�s? Isso deve ser o que o vosso simples c�rebro est� pensando, pois bem, n�o � por sermos todos monstros que far� com que eles tenham um ex�mio intelecto como o meu.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Como descobrir o disfarce se sao exatamente iguais a nos? Isso deve ser o que o vosso simples cerebro esta pensando, pois bem, nao e por sermos todos monstros que fara com que eles tenham um eximio intelecto como o meu.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			dialogScene++;
 			break;
 		case 2:
 			goDialog->Deactivate();
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Na verdade eles s�o t�o ineptos no que tentam fazer que nem um simples disfarce conseguem fazer direito, se prestar bem aten��o ver� que eles possuem uma personalidade bem distante d� que se espera.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Na verdade eles sao tao ineptos no que tentam fazer que nem um simples disfarce conseguem fazer direito, se prestar bem atencao vera que eles possuem uma personalidade bem distante de que se espera.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			dialogScene++;
 			break;
 		case 3:
 			goDialog->Deactivate();
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Se seu simples intelecto n�o conseguiu entender ent�o eu vou te mostrar.Preste bem aten��o naquele homem de terno, vamos ver como ele age.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Se seu simples intelecto nao conseguiu entender entao eu vou te mostrar.Preste bem atencao naquele homem de terno, vamos ver como ele age.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			dialogScene++;
 			break;
@@ -467,7 +467,7 @@ void TutorialStageState::SecondMonsterTutorialUpdate(float dt) {
 				objects["GUI"][i]->Activate();
 			}
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Eis que agora voc� deve conseguir enxergar os milagres que minhas informa��es trazem a voc�.Mas como eu n�o espero que seu intelecto seja capaz de entender eu vou explicar para voc�.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Eis que agora voce deve conseguir enxergar os milagres que minhas informacoes trazem a voce.Mas como eu nao espero que seu intelecto seja capaz de entender eu vou explicar para voce.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			dialogScene++;
 			break;
@@ -480,14 +480,14 @@ void TutorialStageState::SecondMonsterTutorialUpdate(float dt) {
 			goSetas->AddComponent(new CameraFollower(*goSetas, Vec2(220, 24)));
 			AddObject(goSetas, "GUI");
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Aqui v�o estar informa��es que estarei acompanhando sobre voc�, os cora��es  representam sua sa�de, se todos esvaziarem,   bem, meus p�sames.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Aqui vao estar informacoes que estarei acompanhando sobre voce, os coracoes  representam sua sa�de, se todos esvaziarem,   bem, meus pesames.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			dialogScene++;
 			break;
 		case 7:
 			goDialog->Deactivate();
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Os simbolos m�gicos abaixo do cora��o � a atual magia que eu estarei pronto para preparar,  dessa maneira at� voc� pode acompanhar minhas  magias superiores.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Os simbolos magicos abaixo do coracao e a atual magia que eu estarei pronto para preparar,  dessa maneira ate voce pode acompanhar minhas  magias superiores.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			dialogScene++;
 			break;
@@ -501,7 +501,7 @@ void TutorialStageState::SecondMonsterTutorialUpdate(float dt) {
 			goSetas->AddComponent(new CameraFollower(*goSetas, Vec2(804, 20)));
 			AddObject(goSetas, "GUI");
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Eu consigo sentir o qu�o desconfiado esses monstros se sentem, por meio do meu belo olho m�gico eu consigo te mostrar o qu�o desconfiado o monstro est�.Se perceber que voc� est� procurando por ele,o monstro se transformar�.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Eu consigo sentir o quao desconfiado esses monstros se sentem, por meio do meu belo olho magico eu consigo te mostrar o quao desconfiado o monstro esta.Se perceber que voce esta procurando por ele,o monstro se transformara.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			dialogScene++;
 			break;
@@ -515,7 +515,7 @@ void TutorialStageState::SecondMonsterTutorialUpdate(float dt) {
 			goSetas->AddComponent(new CameraFollower(*goSetas, Vec2(750, 120)));
 			AddObject(goSetas, "GUI");
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Eu consigo tamb�m te mostrar quantas pessoas e quantos monstros existem por perto, dessa maneira voc� consegue saber quantos monstros faltam para encontrar.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Eu consigo tambem te mostrar quantas pessoas e quantos monstros existem por perto, dessa maneira voce consegue saber quantos monstros faltam para encontrar.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			dialogScene++;
 			break;
@@ -523,7 +523,7 @@ void TutorialStageState::SecondMonsterTutorialUpdate(float dt) {
 			goSetas->Deactivate();
 			goDialog->Deactivate();
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Agora que voc� tem minha ajuda as coisas   ficaram muito f�ceis, vou deixar voc� capturar sozinho esse monstro disfar�ado nesse homem de terno.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Agora que voce tem minha ajuda as coisas   ficaram muito faceis, vou deixar voce capturar sozinho esse monstro disfarcado nesse homem de terno.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			dialogScene++;
 			break;
@@ -541,7 +541,7 @@ void TutorialStageState::SecondMonsterTutorialUpdate(float dt) {
 		}
 		if (blibMonster->GetAction() == IDLE && suitDialog) {
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Viu s� o que eu disse, quem por acaso teria  medo de uma lixeira, foi rid�culo de minha  parte sequer compar�-los a mim. Bem, acho que est� na hora de lhe agraciar com mais um pouco  do meu conhecimento.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Viu so o que eu disse, quem por acaso teria  medo de uma lixeira, foi ridiculo de minha  parte sequer compara-los a mim. Bem, acho que esta na hora de lhe agraciar com mais um pouco  do meu conhecimento.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			suitDialog = false;
 			dialogScene++;
@@ -551,7 +551,7 @@ void TutorialStageState::SecondMonsterTutorialUpdate(float dt) {
 	if (goSecondMonster->IsDead()) {
 		dialogScene = 0;
 		goDialog = new GameObject();
-		goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Realmente minha magia � t�o forte que at� mesmo voc� conseguiu derrotar esse monstro.Vamos para o que interessa agora.", Vec2(512, 500)));
+		goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Realmente minha magia e tao forte que ate mesmo voce conseguiu derrotar esse monstro.Vamos para o que interessa agora.", Vec2(512, 500)));
 		AddObject(goDialog, "DIALOG");
 		tutorialScene++;
 	}
@@ -574,13 +574,13 @@ void TutorialStageState::FreeTutorialUpdate(float dt) {
 		case 1:
 			goDialog->Deactivate();
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Esse tempo todo eu ainda estive te ajudando com uma magia muito poderosa que congelava o tempo, mas agora voc� estar� por si para testar tudo o que aprendeu.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Esse tempo todo eu ainda estive te ajudando com uma magia muito poderosa que congelava o tempo, mas agora voce estara por si para testar tudo o que aprendeu.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			break;
 		case 2:
 			goDialog->Deactivate();
 			goDialog = new GameObject();
-			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Existe mais um monstro escondido, encontre ele  e capture-o para sairmos desta maldita pris�o  de livros.", Vec2(512, 500)));
+			goDialog->AddComponent(new DialogBox(*goDialog, ASSETS_PATH("/img/HUD/dialogG.png"), ASSETS_PATH("/font/VT323.ttf"), "Existe mais um monstro escondido, encontre ele  e capture-o para sairmos desta maldita prisao  de livros.", Vec2(512, 500)));
 			AddObject(goDialog, "DIALOG");
 			break;
 		case 3:
